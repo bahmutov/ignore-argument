@@ -61,6 +61,9 @@ Read about functional utilities
 * [Selective application](http://bahmutov.calepin.co/selective-partial-application.html)
 * [My favorite functional adaptors](http://bahmutov.calepin.co/my-favorite-functional-adaptors.html)
 
+[madness]: https://github.com/raganwald-deprecated/homoiconic/blob/master/2013/01/madness.md
+[fp]: https://github.com/bahmutov/functional-pipeline
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
@@ -109,5 +112,3 @@ OTHER DEALINGS IN THE SOFTWARE.
 [ignore-argument-dependencies-url]: https://david-dm.org/bahmutov/ignore-argument
 [ignore-argument-devdependencies-image]: https://david-dm.org/bahmutov/ignore-argument/dev-status.png
 [ignore-argument-devdependencies-url]: https://david-dm.org/bahmutov/ignore-argument#info=devDependencies
-
-[madness]: https://github.com/raganwald-deprecated/homoiconic/blob/master/2013/01/madness.md
