@@ -10,6 +10,45 @@
 
 Available on NPM and bower under name `ignore-argument`.
 
+Sometimes you need to create temp functions just to ignore some arguments
+
+```js
+function foo(a, b) { ... }
+function bar(cb) {
+  // calls cb with 3 arguments!
+  cb('foo', 'a', 'b');
+}
+bar(foo); // does not work, throws an error
+bar(function (first, a, b) {
+    // first argument is ignored
+    return foo(a, b);
+});
+```
+
+**ignore-argument** allows skipping (ignoring) arguments by position. Same example as above
+
+```js
+bar(ignoreArgument(foo, true)); // ignored first argument to foo
+```
+
+You can ignore multiple arguments. For example to ignore first and third:
+
+```js
+function bar(cb) {
+  // calls cb with 4 arguments!
+  cb('foo', 'a', 'bar', 'b');
+}
+// ignore first and third arguments
+bar(ignoreArgument(foo, true, false, true));
+```
+
+You can also quickly solve the [Madness of JavaScript][madness] problem.
+
+```js
+['1', '2', '3'].map(parseInt); // [1, NaN, NaN]
+['1', '2', '3'].map(ignoreArgument(parseInt, false, true)); // [1, 2, 3]
+```
+
 Related projects: 
 
 * [spots](https://github.com/bahmutov/spots)
@@ -62,14 +101,13 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[spots-icon]: https://nodei.co/npm/spots.png?downloads=true
-[spots-url]: https://npmjs.org/package/spots
-[spots-ci-image]: https://travis-ci.org/bahmutov/spots.png?branch=master
-[spots-ci-url]: https://travis-ci.org/bahmutov/spots
-[spots-dependencies-image]: https://david-dm.org/bahmutov/spots.png
-[spots-dependencies-url]: https://david-dm.org/bahmutov/spots
-[spots-devdependencies-image]: https://david-dm.org/bahmutov/spots/dev-status.png
-[spots-devdependencies-url]: https://david-dm.org/bahmutov/spots#info=devDependencies
+[ignore-argument-icon]: https://nodei.co/npm/ignore-argument.png?downloads=true
+[ignore-argument-url]: https://npmjs.org/package/ignore-argument
+[ignore-argument-ci-image]: https://travis-ci.org/bahmutov/ignore-argument.png?branch=master
+[ignore-argument-ci-url]: https://travis-ci.org/bahmutov/ignore-argument
+[ignore-argument-dependencies-image]: https://david-dm.org/bahmutov/ignore-argument.png
+[ignore-argument-dependencies-url]: https://david-dm.org/bahmutov/ignore-argument
+[ignore-argument-devdependencies-image]: https://david-dm.org/bahmutov/ignore-argument/dev-status.png
+[ignore-argument-devdependencies-url]: https://david-dm.org/bahmutov/ignore-argument#info=devDependencies
 
 [madness]: https://github.com/raganwald-deprecated/homoiconic/blob/master/2013/01/madness.md
-[fp]: https://github.com/bahmutov/functional-pipeline

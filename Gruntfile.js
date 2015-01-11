@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       all: [
         'src/*.js'
       ],
-      specs: ['test/*.js'],
+      specs: ['test/*spec.js'],
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-summary')
