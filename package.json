@@ -1,0 +1,27 @@
+{
+  "name": "ignore-arguments",
+  "version": "0.0.1",
+  "description": "Like Function.prototype.bind / partial application to ignore arguments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/ignore-argument.git"
+  },
+  "keywords": [
+    "function",
+    "functional",
+    "bind",
+    "arguments",
+    "ignore",
+    "apply"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/ignore-argument/issues"
+  },
+  "homepage": "https://github.com/bahmutov/ignore-argument"
+}
