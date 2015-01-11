@@ -1,71 +1,30 @@
-# spots
+# ignore-argument
 
-> Partial function argument binding with placeholders
+> Like Function.prototype.bind / partial application to ignore arguments.
 
-[![NPM][spots-icon] ][spots-url]
+[![NPM][ignore-argument-icon] ][ignore-argument-url]
 
-[![Build status][spots-ci-image] ][spots-ci-url]
-[![dependencies][spots-dependencies-image] ][spots-dependencies-url]
-[![devdependencies][spots-devdependencies-image] ][spots-devdependencies-url]
+[![Build status][ignore-argument-ci-image] ][ignore-argument-ci-url]
+[![dependencies][ignore-argument-dependencies-image] ][ignore-argument-dependencies-url]
+[![devdependencies][ignore-argument-devdependencies-image] ][ignore-argument-devdependencies-url]
 
-**spots** makes it simple to bind some arguments, leaving the rest free.
+Available on NPM and bower under name `ignore-argument`.
 
-```js
-var S = require('spots');
-function sub(a, b) {
-  return a - b;
-}
-// use library itself as a placeholder
-var minus1 = S(sub, S, 1);
-// minus1 = sub(_, 1) function
-minus1(9); // 8, same as sub(9, 1);
-```
+Related projects: 
 
-It can apply more than 1 argument.
-
-```js
-function add4(a, b, c, d) { return a + b + c + d; }
-var applyEven = S(add4, S, 1, S, 2);
-applyEven(-1, -2); // 0
-// equivalent to add4(-1, 1, -2, 2);
-```
-
-It works very nice to solve [JavaScript Madness][madness] problem.
-
-```js
-['1', '2', '3'].map(S(parseInt, S, 10));
-// returns [1, 2, 3]
-```
-
-You can use **spots** with [functional-pipeline][fp] to apply arguments *to the individual steps*.
-
-```js
-var fp = require('functional-pipeline');
-function add(a, b) { return a + b; }
-function sub(a, b) { return a - b; }
-fp(
-  S(sub, 1, S),
-  S(add, S, 20)
-)(3); // 18
-// same as
-// add( sub(1, 3), 20 )
-```
-
-Real world example [chdir-promise index.js](https://github.com/bahmutov/chdir-promise/blob/master/index.js)
-where we use *spots* to pass argument to `Q.try` method.
-
-Related: 
-
-* [Point-free is not pointless](http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html)
-* [Selective application](http://bahmutov.calepin.co/selective-partial-application.html)
+* [spots](https://github.com/bahmutov/spots)
 * [functional-pipeline][fp]
 * [heroin](https://github.com/bahmutov/heroin)
 
-Available on NPM and bower under name `spots`.
+Read about functional utilities
+
+* [Point-free is not pointless](http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html)
+* [Selective application](http://bahmutov.calepin.co/selective-partial-application.html)
+* [My favorite functional adaptors](http://bahmutov.calepin.co/my-favorite-functional-adaptors.html)
 
 ### Small print
 
-Author: Gleb Bahmutov &copy; 2014
+Author: Gleb Bahmutov &copy; 2015
 
 * [@bahmutov](https://twitter.com/bahmutov)
 * [glebbahmutov.com](http://glebbahmutov.com)
@@ -76,11 +35,11 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 Spread the word: tweet, star on github, etc.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/spots/issues) on Github
+[open issue](https://github.com/bahmutov/ignore-argument/issues) on Github
 
 ## MIT License
 
-Copyright (c) 2014 Gleb Bahmutov
+Copyright (c) 2015 Gleb Bahmutov
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
