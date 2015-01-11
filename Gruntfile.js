@@ -15,21 +15,12 @@ module.exports = function(grunt) {
       }
     },
 
-    mochaTest: {
-      all: {
-        options: {
-          reporter: 'spec'
-        },
-        src: ['test/*-spec.js']
-      }
-    },
-
     umd: {
       wrap: {
-        src: 'src/spots.js',
+        src: 'src/ignore-argument.js',
         dest: 'index.js',
-        objectToExport: 'spots',
-        amdModuleId: 'spots',
+        objectToExport: 'ignoreArgument',
+        amdModuleId: 'ignoreArgument',
         index: 2
       }
     },
@@ -57,7 +48,7 @@ module.exports = function(grunt) {
   var plugins = require('matchdep').filterDev('grunt-*');
   plugins.forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('test', ['mochaTest', 'clean-console']);
+  grunt.registerTask('test', ['clean-console']);
   grunt.registerTask('default',
     ['nice-package', 'sync', 'deps-ok', 'jshint', 'umd', 'test']);
 };

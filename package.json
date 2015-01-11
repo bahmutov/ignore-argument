@@ -1,23 +1,12 @@
 {
   "name": "ignore-argument",
-  "version": "0.0.1",
   "description": "Like Function.prototype.bind / partial application to ignore arguments.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/bahmutov/ignore-argument/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:bahmutov/ignore-argument.git"
-  },
-  "keywords": [
-    "function",
-    "functional",
-    "bind",
-    "arguments",
-    "ignore",
-    "apply"
-  ],
+  "contributors": [],
   "devDependencies": {
     "grunt-clean-console": "0.1.1",
     "grunt-contrib-jshint": "0.10.0",
@@ -31,10 +20,25 @@
     "matchdep": "0.3.0",
     "pre-git": "0.1.1"
   },
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bahmutov/ignore-argument/issues"
+  "engines": {
+    "node": ">= 0.8.0"
   },
-  "homepage": "https://github.com/bahmutov/ignore-argument"
+  "homepage": "https://github.com/bahmutov/ignore-argument",
+  "keywords": [
+    "function",
+    "functional",
+    "bind",
+    "arguments",
+    "ignore",
+    "apply"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/ignore-argument.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
