@@ -34,11 +34,15 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "pre-commit": [
+    "grunt",
+    "npm version"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:bahmutov/ignore-argument.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt"
   }
 }
