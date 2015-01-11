@@ -1,0 +1,20 @@
+{
+  "name": "ignore-argument",
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "version": "0.0.1",
+  "description": "Like Function.prototype.bind / partial application to ignore arguments.",
+  "license": "MIT",
+  "homepage": "https://github.com/bahmutov/ignore-argument",
+  "main": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "docs",
+    "src",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}

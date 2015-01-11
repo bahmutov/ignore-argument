@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ignore-argument</title>
+    <script src="../index.js"></script>
+  </head>
+  <body>
+    <h1>ignore-argument</h1>
+    <p>Open browser console to see any error messages</p>
+    <script>
+      console.log('ignore-argument');
+      if (typeof ignoreArgument !== 'function') {
+        throw new Error('cannot find ignoreArgument function');
+      }
+    </script>
+  </body>
+</html>
