@@ -57,9 +57,9 @@ Related projects:
 
 Read about functional utilities
 
-* [Point-free is not pointless](http://bahmutov.calepin.co/point-free-programming-is-not-pointless.html)
-* [Selective application](http://bahmutov.calepin.co/selective-partial-application.html)
-* [My favorite functional adaptors](http://bahmutov.calepin.co/my-favorite-functional-adaptors.html)
+* [Point-free is not pointless](http://glebbahmutov.com/blog/point-free-programming-is-not-pointless/)
+* [Selective application](http://glebbahmutov.com/blog/selective-partial-application/)
+* [My favorite functional adaptors](http://glebbahmutov.com/blog/my-favorite-functional-adaptors/)
 
 [madness]: https://github.com/raganwald-deprecated/homoiconic/blob/master/2013/01/madness.md
 [fp]: https://github.com/bahmutov/functional-pipeline
